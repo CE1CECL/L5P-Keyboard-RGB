@@ -211,7 +211,7 @@ pub fn get_keyboard(stop_signal: Arc<AtomicBool>) -> Result<Keyboard, error::Err
 		.device_list()
 		.find(|d| {
 			let info_tuple = (d.vendor_id(), d.product_id(), d.usage_page(), d.usage());
-			info_tuple == DEVICE_INFO_2021 || info_tuple == DEVICE_INFO_2020 || info_tuple == DEVICE_INFO_IDEAPAD_2021 || info_tuple == DEVICE_INFO_2022
+			info_tuple == DEVICE_INFO_2021 || info_tuple == DEVICE_INFO_2020 || info_tuple == DEVICE_INFO_IDEAPAD_2021 || info_tuple == DEVICE_INFO_2022 || info_tuple == DEVICE_INFO_2019
 		})
 		.ok_or(error::Error::DeviceNotFound)?;
 
